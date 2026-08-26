@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Datos Personales - Programación IV</title>
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+<div class="contenedor">
+<main class="tarjeta">
+<h2>Datos personales</h2>
+<form method="POST" action="practica.php" class="formulario">
+<div class="campo">
+<label for="nombre">Ingrese su nombre:</label>
+<input type="text" id="nombre" name="nombre"
+value="<?php echo htmlspecialchars($nombre); ?>" required>
+</div>
+<div class="campo">
+<label for="apellido">Ingrese su apellido:</label>
+<input type="text" id="apellido" name="apellido"
+value="<?php echo htmlspecialchars($apellido); ?>" required>
+</div>
+<div class="campo">
+<label>Seleccione su estado civil:</label>
+<div class="grupo-opciones">
+<label><input type="radio" name="estado_civil" value="Soltero" <?php echo ($estadoCivil
+=== 'Soltero') ? 'checked' : ''; ?>> Soltero</label>
+<label><input type="radio" name="estado_civil" value="Casado" <?php echo ($estadoCivil
+=== 'Casado') ? 'checked' : ''; ?>> Casado</label>
+<label><input type="radio" name="estado_civil" value="Divorciado" <?php echo
+($estadoCivil === 'Divorciado') ? 'checked' : ''; ?>> Divorciado</label>
+<label><input type="radio" name="estado_civil" value="Viudo" <?php echo ($estadoCivil ===
+'Viudo') ? 'checked' : ''; ?>> Viudo</label>
+</div>
+</div>
+<div class="campo">
+<label for="ciudad">Seleccione su ciudad:</label>
+<select id="ciudad" name="ciudad">
+<option value="Caacupé" <?php echo ($ciudad === 'Caacupé') ? 'selected' : '';
+?>>Caacupé</option>
+<option value="Asunción" <?php echo ($ciudad === 'Asunción') ? 'selected' : '';
+?>>Asunción</option>
+<option value="Luque" <?php echo ($ciudad === 'Luque') ? 'selected' : ''; ?>>Luque</option>
+</select>
+</div>
+<div class="campo">
+<label for="password">Ingrese su contraseña:</label>
+<input type="password" id="password" name="password" required>
+</div>
+<div style="display:flex; gap:10px;">
+<button type="submit" class="boton-enviar">Enviar datos</button>
+<button type="reset" class="boton-volver" style="margin-top:0;">Borrar datos</button>
+</div>
+</form>
+</main>
+<?php if ($procesado): ?>
+<?php if (count($errores) > 0): ?>
+<section class="tarjeta">
+<h2>Error de la contraseña</h2>
+<?php foreach ($errores as $err): ?>
+<p class="aviso"><?php echo htmlspecialchars($err); ?></p>
+<?php endforeach; ?>
+</section>
+<?php else: ?>
+<section class="tarjeta resultado">
+<h2>Los datos proporcionados son</h2>
+<table>
+<tr><th>Sr/a:</th><td class="valor"><?php echo htmlspecialchars($nombre . ' ' . $apellido);
+?></td></tr>
+<tr><th>Su estado civil es:</th><td class="valor"><?php echo
+htmlspecialchars($estadoCivil); ?></td></tr>
+<tr><th>y vive en la ciudad de:</th><td class="valor"><?php echo
+htmlspecialchars($ciudad); ?></td></tr>
+</table>
+</section>
+<?php endif; ?>
+<?php endif; ?>
+</div>
+</body>
+</html>

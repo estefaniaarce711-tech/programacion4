@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <style>
+form {
+    display: flex;
+    flex-direction: column; /* coloca los elementos uno debajo del otro */
+    gap: 10px; /* espacio entre bloques */
+    max-width: 300px;
+}
+
+.opciones {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* espacio entre cada radio */
+}
+
+.botones {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    
+}
+fieldset{
+    width: 400px;
+}
+
+     </style> 
+     
+</head>
+<body>
+    <fieldset>
+ <form action="ejercicio3.php" method="post">
+    <h1>Juego de lanzamiento de moneda</h1>
+    <label>Elija una opción</label>
+    
+    <div class="opciones">
+        <input type="radio" value="Cara" name="rdmoneda" id="rdcara" checked>
+        <label for="rdcara">Cara</label>
+
+        <input type="radio" name="rdmoneda" id="rdcruz" value="Cruz">
+        <label for="rdcruz">Cruz</label>
+    </div>
+
+    <div class="botones">
+        <input type="submit" name="btniniciar" id="btniniciar" value="Iniciar">
+        <input type="reset" name="btnborrar" id="btnborrar" value="Borrar">
+    </div>
+</form>
+
+    </fieldset>
+    
+</body>
+</html>

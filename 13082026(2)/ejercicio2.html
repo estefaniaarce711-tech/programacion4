@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ejercicio3.css">
+    <title>Información sobre el producto</title>
+</head>
+<body>
+<form action="ejercicio3.php" method="post">
+    <fieldset>
+        <legend>Datos básicos</legend>
+        <label for="txtnombre">Nombre:</label>
+        <input type="text" name="txtnombre" id="txtnombre" placeholder="ej: Maria" required maxlength="50">
+
+        <label for="descripcion">Descripción:</label>
+        <textarea id="descripcion" name="txtdescripcion" rows="5" cols="40" placeholder="Escribe aquí tu descripción..."></textarea>
+    </fieldset>
+
+    <fieldset>
+        <legend>Datos económicos</legend>
+        
+        <div class="precio-linea">
+            <label for="txtprecio">Precio:</label>
+            <input type="number" name="txtprecio" id="txtprecio" placeholder="ej: 2000" required>
+            <span>Gs.</span>
+        </div>
+
+       <label>Promoción:</label>
+<div class="promocion-opcion">
+    <input type="radio" value="Ninguno" name="radpromocion" id="radninguno" checked>
+    <label for="radninguno">Ninguno</label>
+</div>
+<div class="promocion-opcion">
+    <input type="radio" value="Transporte" name="radpromocion" id="radtransporte">
+    <label for="radtransporte">Transporte gratuito</label>
+</div>
+<div class="promocion-opcion">
+    <input type="radio" value="Descuento" name="radpromocion" id="raddescuento">
+    <label for="raddescuento">Descuento del 5%</label>
+</div>
+
+        <div class="impuestos-linea">
+            <label for="cmbimpuesto">Impuestos:</label>
+            <select name="cmbimpuesto" id="cmbimpuesto">
+                <option value="5%">5%</option>
+                <option value="10%">10%</option>
+                <option value="15%">15%</option>
+            </select>
+        </div>
+    </fieldset>
+
+    <input type="submit" name="btnenviar" id="btnenviar" value="Enviar datos">
+    <input type="reset" name="btnborrar" id="btnborrar" value="Borrar datos">
+</form>
+</body>
+</html>

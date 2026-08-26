@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Operaciones Matemáticas</title>
+</head>
+<body>
+    <h1>Calculadora básica</h1>
+    <form action="ejercicio14.php" method="post">
+        <label>Ingrese el primer número:</label>
+        <input type="number" name="num1" required>
+        <br><br>
+
+        <label>Ingrese el segundo número:</label>
+        <input type="number" name="num2" required>
+        <br><br>
+
+        <label>Seleccione la operación:</label>
+        <select name="operador" required>
+            <option value="">--Seleccione--</option>
+            <option value="suma">Sumar</option>
+            <option value="resta">Restar</option>
+            <option value="multiplicacion">Multiplicar</option>
+            <option value="division">Dividir</option>
+            <option value="resto">Resto de la división</option>
+        </select>
+        <br><br>
+
+        <input type="submit" value="Calcular">
+    </form>
+</body>
+</html>

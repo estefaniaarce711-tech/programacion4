@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor principal */
+form {
+    background: #fff;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Títulos */
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+/* Etiquetas y campos */
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Checkboxes */
+p {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+form br {
+    display: none; /* ocultar saltos de línea innecesarios */
+}
+
+/* Botón */
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background: #3498db;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background: #2980b9;
+}
+
+/* Resultados en operaciones.php */
+h1 {
+    margin-top: 0;
+}
+
+p {
+    margin: 8px 0;
+}
+
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <form action="ejercicio16.php" method="post">
+    <label for="lbln1">Ingrese un dato entero:</label>
+<input type="number" name="lbln1" id="lbln1" required>
+    <label for="">Ingrese otro dato entero:</label>
+    <input type="number" name="lbln2" id="lbln2" required>
+
+    <input type="checkbox" name="chkoperacion[]" id="chksuma" value="suma"><label for="chksuma">suma</label>
+    <input type="checkbox" name="chkoperacion[]" id="chkresta" value="resta"><label for="chkresta">resta</label>
+        <input type="checkbox" name="chkoperacion[]" id="chkmultiplicacion" value="multiplicacion"><label for="chkmultiplicacion">multiplicacion</label>
+            <input type="checkbox" name="chkoperacion[]" id="chkdivision" value="division"><label for="chkdivision">division</label>
+                <input type="checkbox" name="chkoperacion[]" id="chkresto" value="resto de la division"><label for="chkresto">resto de la division</label>
+
+                       <input type="submit" value="Calcular">
+    </form>
+</body>
+</html>

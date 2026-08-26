@@ -1,0 +1,85 @@
+/* Etiquetas generales */
+label {
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+/* Contenedor de cada bloque */
+fieldset {
+    width: 400px;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+/* Título de cada bloque */
+legend {
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Inputs y textarea */
+textarea,
+input[type="text"],
+input[type="number"] {
+    width: 95%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+}
+
+/* Select de impuestos con ancho fijo */
+#cmbimpuesto {
+    width: 100px;
+    padding: 6px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+}
+
+/* Precio en una sola línea */
+.precio-linea {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Impuestos alineados a la derecha */
+.impuestos-linea {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* Promoción: radio + texto en la misma línea */
+.promocion-opcion {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 5px;
+}
+
+/* Botones */
+#btnenviar,
+#btnborrar {
+    margin-top: 15px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#btnenviar {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#btnborrar {
+    background-color: #f44336;
+    color: white;
+}

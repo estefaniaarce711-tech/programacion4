@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        label{
+            display: block;
+        }
+        fieldset{
+            width:400px;
+        }
+        legend{
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend>Datos personales</legend>
+         <form action="ejemplo2.php" method="post">
+     <label for="txtnombre">Ingrese su nombre:</label>
+     <input type="text" value="" name="txtnombre" id="txtnombre" required placeholder="Ej:Maria" maxlength="50"><br>
+
+     <label for="txtapellido">Ingrese su apellido:</label>
+     <input type="text" name="txtapellido" required placeholder="Ej:Arce" maxlength="50" minlength="5">
+
+     <br><br>
+     <label for="">Selecione su estado civil</label>
+     <br><br>
+     <input type="radio" value="soltero" name="radcivil" id="radsoltero" checked><label for="radsoltero">Soltero</label>
+     <!--al asociar el id con el for del lavel ambas pueden usarse paraseleccionar-->
+     <input type="radio" value="casado" name="radcivil" id="radcasado"><label for="radcasado">Casado</label>
+     <input type="radio" value="viudo"name="radcivil" id="radviudo"><label for="radviudo">Viudo</label>
+     <input type="radio" value="divorciado" name="radcivil" id="raddivorciado"><label for="raddivorciado">Divorciado</label>
+<br><br>
+
+   <label for="">Seleccione su ciudad</label><br><br>
+   <select name="cmbciudad" id="cmbciudad">
+    <option value="caacupe">Caacupe</option>
+    <option value="ypacarai">Ypacarai</option>
+    <option value="itaugua">Itaugua</option>
+    <option value="altos">Altos</option>
+    <option value="atyra" selected>Atyra</option>
+   </select>
+   <br><br>
+   <label for="txtcontrasena">Ingrese su contraseña</label>
+   <input type="password" name="txtcontrasena " id="txtcontrasena" minlength="8" maxlength="20"> <br><br>
+   <input type="submit" value="Enviar datos" name="btnenviar">
+   <input type="reset" value="Borrar datos" name="btnborrar">
+
+    </form>
+    </fieldset>
+  
+
+</body>
+</html>
