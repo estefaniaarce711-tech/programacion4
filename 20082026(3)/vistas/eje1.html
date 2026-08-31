@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de Personas</title>
+    <link rel="stylesheet" href="../css/eje1.css">
+
+</head>
+<body>
+    <div class="contenedor">
+        <h1>Formulario de Registro</h1>
+        <form action="../eje1.php" method="post" onsubmit="return validarFormulario()">
+            <label>Nombre:</label>
+            <input type="text" name="nombre" id="nombre" required>
+
+            <label>Apellido:</label>
+            <input type="text" name="apellido" id="apellido" required>
+
+            <label>Cédula de Identidad:</label>
+            <input type="text" name="cedula" id="cedula" required>
+
+            <label>Celular:</label>
+            <input type="text" name="celular" id="celular" required>
+
+            <label>Email:</label>
+            <input type="email" name="email" id="email" required>
+
+            <label>Fecha de Nacimiento:</label>
+            <input type="date" name="fecha_nacimiento" id="fecha_nacimiento" required>
+
+            <input type="submit" value="Registrar">
+        </form>
+    </div>
+</body>
+<script  src="../js/eje1.js"></script>
+</html>

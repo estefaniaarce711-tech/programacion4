@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Cálculo de Cuadrado</title>
+  <!-- Bootstrap -->
+ 
+</head>
+<body class="container mt-5">
+
+  <h2 class="mb-4">Cálculo Simultáneo de Cuadrados</h2>
+
+  <form method="POST" action="../eje5.php" class="card p-4 shadow">
+    <div class="mb-3">
+      <label for="lado" class="form-label">Longitud del lado (L):</label>
+      <input type="number" name="lado" id="lado" class="form-control" required placeholder="Ej: 5">
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Seleccione las operaciones:</label><br>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" name="operacion[]" id="perimetro" value="perimetro">
+        <label class="form-check-label" for="perimetro">Calcular Perímetro (4 × L)</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" name="operacion[]" id="superficie" value="superficie">
+        <label class="form-check-label" for="superficie">Calcular Superficie (L²)</label>
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Calcular</button>
+  </form>
+
+</body>
+</html>
